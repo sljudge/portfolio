@@ -17,55 +17,67 @@
                 <i class="fas fa-gavel"></i>
             </div>
             <div class="icon-container">
-                <i class="fas fa-info-circle"></i>
-                <i class="fas fa-folder"></i>
-                <i class="fas fa-address-book"></i>
+                <i class="home fas fa-home"></i>
+                <i class="about fas fa-info-circle"></i>
+                <i class="portfolio fas fa-folder"></i>
+                <!-- <i class="contact fas fa-address-book"></i> -->
             </div>
         </nav>
         <main>
             <div class="banner">
                 <div class="banner-text">
-                    <h1>Sam Judge</h1>
-                    <p>Web Development & Design</p>
+                    <h1>Sam<br>Judge</h1>
+                    <p>Web Development &<br>Design</p>
                 </div>
-            </div>
-            <div class="banner-footer">
-
+                <!-- <div class="banner-footer"></div> -->
             </div>
             <div class="info-container">
                 <div class='about'>
                     <div class="about-text">
-                        <h2>About</h2>
+                        <div class="sm-screen-header">
+                            <img src="/img/portrait.jpg" alt="">
+                            <h2>About</h2>
+                        </div>
+                        <div class="lg-screen-header">
+                            <h2>About</h2>
+                            <img src="/img/portrait.jpg" alt="">
+                        </div>
                         <p>
                             Esse id veniam id nostrud velit elit exercitation enim ipsum. Aliquip fugiat elit et deserunt veniam occaecat qui aute voluptate est. Ea aute voluptate fugiat occaecat veniam consequat ad anim ullamco anim tempor elit.
                         </p>
                     </div>
                     <div class='values'>
                         <div class="values-col">
-                            <div class="value">Learn</div>
-                            <div class="value">Create</div>
+                            <div class="value top-left">
+                                <img src="/img/right_lightbulb_brain.svg" alt="">
+                            </div>
+                            <div class="value bottom-left">
+                                <img src="/img/right_computer_brain.svg" alt="">
+                            </div>
                         </div>
                         <div class="values-col">
-                            <div class="value">Build</div>
+                            <div class="value top-right">
+                                <img src="/img/left_computer_brain.svg" alt="">
+                            </div>
+                            <div class="value bottom-right">
+                                <img src="/img/left_color_brain.svg" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="skills">
-                    <h2>Tech</h2>
-                    <div class="tech-icons">
-                        <i class="fab fa-html5"></i>
-                        <i class="fab fa-sass"></i>
-                        <i class="fab fa-node-js"></i>
-                        <i class="fab fa-github-square"></i>
-                        <i class="fab fa-gulp"></i>
-                        <i class="fab fa-php"></i>
-                        <i class="fab fa-laravel"></i>
-                        <i class="fab fa-python"></i>
-                    </div>
+                    <i class="skill fab fa-html5"></i>
+                    <i class="skill fab fa-sass"></i>
+                    <i class="skill fab fa-node-js"></i>
+                    <i class="skill fab fa-github-square"></i>
+                    <i class="skill fab fa-gulp"></i>
+                    <i class="skill fab fa-php"></i>
+                    <i class="skill fab fa-laravel"></i>
+                    <i class="skill fab fa-python"></i>
                 </div>
             </div>
         
-            <h2>Projects</h2>
+            <h2 class="projects-header">Portfolio</h2>
             <div class="projects">
                 <div class="project-tile">
                     <a href="" target="">
@@ -97,11 +109,17 @@
                     <h3>js_documentation</h3>                
                     </a>
                 </div>
+                <div class='project-tile'>
+                    <a href="" target="">
+                    <img src="/img/random_quote.png" alt="">
+                    <h3>random_quote_generator</h3>                
+                    </a>
+                </div>
             </div>
             <footer>
-                <i class= "fab fa-github"></i>
-                <i class="fas fa-at"></i>
-                <i class="fas fa-mobile-alt"></i>
+                <i class= "git fab fa-github"></i>
+                <i class="email fas fa-at"></i>
+                <i class="phone fas fa-mobile-alt"></i>
             </footer>
         </main>
     </body>
