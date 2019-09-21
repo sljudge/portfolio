@@ -22,6 +22,10 @@ html{
         font-size: 15px;
     }
 
+    @media screen and (min-width: 1250px){
+        max-height: 200vh;
+    }
+
 }
 body{
     display: flex;
@@ -120,9 +124,9 @@ main{
     height: 100vh;
 
     background-color: $light-blue;
-    background-size: cover;
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("/img/cover.jpg"), center;
-
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("/img/cover.jpg"), center/80%;
+    // background-size: cover;
+    
 
     .banner-text{
         width: 100%;
@@ -187,25 +191,23 @@ main{
     }
 }
 
-.banner-footer{
-    // position: absolute;
-    justify-self: flex-end;
-    // top: 90vh;
-
-    height: 15vh;
-    // width: calc(100vw-4.5rem);
-    width: 100%;
-    margin: 0;
-
-    @include page-gradient( rgba(0,128,128,0), rgba(183, 183, 183, 0.8));
+.large-screen-display{
+    @media screen and (min-width:1250px){
+        display: flex;
+        height: 95vh;
+    }
 }
 
 .info-container{
     display: flex;
     flex-shrink: 0;
 
-    height: 90vh;
+    height: 95vh;
     width: 100%;
+
+    @media screen and (min-width:1250px){
+        width: 50%;
+    }
 
     .about{
         display: flex;
@@ -220,9 +222,11 @@ main{
         border-color: $black; 
         color: whitesmoke;
 
-        @media screen and (min-width: 1300px){
-            flex-direction: row;
+        @media screen and (min-width: 1250px){
+            border-width: 0.7rem 0.7rem 0 0;
         }
+
+        
         
         .about-text{
             display: flex;
@@ -245,7 +249,7 @@ main{
                 .lg-screen-header{
                     display: flex;
                     margin-bottom: 1.5rem;
-                    justify-content: space-between;
+                    justify-content: space-around;
 
                     h2{
                         margin-right: 3rem;
@@ -264,11 +268,13 @@ main{
                 height: 60%;
             }
 
-            @media screen and (min-width: 1300px){
-                width: 60%;
-                height: 100%;
-                align-self: center;
+            @media screen and (min-width:1250px){
+                justify-content: center;
+                
+                height: 85%;
+                padding: 1rem;
             }
+
 
             img{
                 padding: 0;
@@ -306,10 +312,6 @@ main{
                 height: 40%;
             }
 
-            @media screen and (min-width: 1300px){
-                align-self: flex-start;
-                width: 40%;
-            }
 
             background-color: black;
             
@@ -392,7 +394,6 @@ main{
         width: 25%;
         padding: 5vh 1rem 0 1rem;
 
-        
         background: linear-gradient(360deg, rgba(183,183,183,1) 6%, rgba(35,35,35,0.7) 95%);
         // border-left: 2px solid $black;
         // border-top: 1px solid $white;
@@ -422,6 +423,27 @@ main{
 
         @media screen and (min-width: 1000px){
             width: 50%;
+        }
+
+        @media screen and (min-width:1250px){
+            flex-direction: column;
+            justify-content: center;
+            
+            padding: 0.1rem;
+            width: 25%;
+
+            border-width: 0.7rem 0 0 0; 
+            border-style: groove;
+            border-color: $black;
+
+            background: linear-gradient(315deg, rgba(183,183,183,1) 6%, rgba(35,35,35,0.7) 95%);
+
+            :nth-child(even){
+                margin: 0.5rem;
+            }
+            :nth-child(odd){
+                margin: 0.5rem;
+            }
         }
 
         
@@ -455,11 +477,14 @@ main{
             @media screen and (min-width: 1175px){
                 margin: 1.5rem;                
             }
-            @media screen and (min-width: 1300px){
-                margin: 1.75rem;                
-                // font-size: 6rem;
-                // width: 8rem;
+            @media screen and (min-width: 1250px){
+                width: 3.5rem;
+                height: 2rem;
+                // margin: 0.5rem;
+
+                font-size: 3rem;
             }
+            
         }
         .skill:hover{
             background-color: whitesmoke;
@@ -468,31 +493,44 @@ main{
         }
     }
 }
-.projects-header{
-    display: inline;
-
-    padding: 2rem;
-    margin: 0;
-
-    font-size: 3rem;
-    
-}
 .projects{
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    
+    
+    width: 100%;
+    padding: 1rem 1rem 2rem 1rem;
+    
+    background: linear-gradient(180deg, rgba(183,183,183,1) 6%, rgba(255,255,255,1) 95%);
+    
     @media screen and (min-width: 600px){
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
     }
 
-    width: 100%;
-    padding-bottom: 2rem;
+    @media screen and (min-width: 1250px){
+        overflow-y: scroll;
 
-    background: linear-gradient(180deg, rgba(183,183,183,1) 6%, rgba(255,255,255,1) 95%);
+        background: linear-gradient(315deg, rgba(183,183,183,1) 6%, rgba(35,35,35,0.7) 95%);
+        border-width: 0.7rem 0 0 0; 
+        border-style: groove;
+        border-color: $black;
+    }
+    .projects-header{
+        display: flex;
+        align-items: center;
+
+        height: 10rem;
+        padding: 2rem;
     
+        font-size: 3rem;
+        background-color: rgba(35, 35, 35, 0.3);
+        border-radius: 0.25rem;
+        box-shadow: 0.25rem 0.25rem rgb(35,35,35);
+        
+    }
 
     .project-tile:hover + h3{
         background-color: $deep-red;
@@ -503,27 +541,34 @@ main{
         
         font-size: 1.5rem;
 
-        :hover{
-            box-shadow: 1rem 1rem $deep-red;
-            font-size: 1.6rem;
-        }
-        :hover + h3{
-            color: $black;
-            background-color: $light-yellow;
-        }
-
+        
         a{
             display: flex;
             flex-direction: column;
             justify-content: center;
-
+            
             text-decoration: none;
+            
+            :hover{
+                box-shadow: 0.4rem 0.4rem $deep-red;
+            }
+            :hover + h3{
+                color: $black;
+                background-color: $light-yellow;
+            }
         }
+        
         img{
             display: block;
             
-            height: 12rem;
-            width: auto;
+            width: 12rem;
+            height: auto;
+
+            @media screen and (min-width: 1250px){
+                // height: 7rem;
+                width: 15rem;
+                height: auto;
+            }
         }
         
         h3{
@@ -542,17 +587,21 @@ footer{
     justify-content: space-evenly;
     align-items: center;
 
-    height: 8rem;
+    height: 7rem;
     margin: 0;
     padding: 1rem;
     
-    // background-color: $black;
     background: linear-gradient(180deg, rgba(23,23,23,1) 0%, rgba(0,0,0,1) 100%);
     color: white;
+
+    // @media screen and (min-width:1250px){
+    //     height: 10vh;
+    // }
     
     i{
+        padding: 1rem;
         font-size: 4rem;
-        padding: 2rem;
+        height: 7rem;
     }
 
     .git:hover{
