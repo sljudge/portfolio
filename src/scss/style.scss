@@ -286,7 +286,8 @@ main{
             
             // WIDTH AND HEIGHT
 
-            @media screen and (min-width: 300px) and (max-height: 569px){
+            //iphone 5
+            @media screen and (min-width: 300px) and (max-width: 350px) and (min-height:550px) and (max-height: 569px){
                 padding-left: 5rem;
                 padding-top: 3rem;
             }
@@ -295,22 +296,30 @@ main{
                 padding: 1rem 6rem 1rem 9rem; 
             }
 
+            @media screen and (min-height: 450px) and (max-width: 400px){
+                padding: 1rem 1rem 1rem 3rem;
+            }
 
+            
+            
             //Ipad Pro
             @media screen and (min-width: 1000px) and (max-width: 1200px) and (min-height: 1300px){
                 padding: 17rem 4rem 15rem 9rem;
             }
-
+            
             @media screen and (min-width: 1300px) and (min-height: 1000px){
                 padding: 10rem 2rem 10rem 7rem;
             }
-
+            
             //Landscape mobile view
-
+            
             @media screen and (orientation: landscape) and (max-height: 500px){
                 padding: 0 1rem 1rem 8rem;
             }
-
+            
+            @media screen and (min-width: 875px) and (max-height:500px){
+                padding: 0 2rem 1rem 8rem;
+            }
 
             background-image: url("/img/hole.png");
             background-origin: padding-box;
