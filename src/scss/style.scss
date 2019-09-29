@@ -1,9 +1,5 @@
 @import "colors.scss";
 
-//opacity === 0 > 0.8
-@mixin page-gradient($color1, $color2){
-    background: linear-gradient(180deg, $color1 0%, $color2 100%);
-}
 
 *{
     box-sizing: border-box;
@@ -50,17 +46,16 @@ nav{
     }
 
     .logo{
-        height: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 4.2rem;
         width: 4.5rem;
         margin: 0;
         padding: 0;
 
-        background-color: $white;
+        background-color: $black;
         border: $black solid 0.2rem;
-        
-        i{
-            color: $black;
-        }
 
     }
 
@@ -73,13 +68,14 @@ nav{
         top: 35vh;
         
         width: 4.5rem;
-        height: 15rem;
+        height: 30vh;
         margin: 0;
 
         background: linear-gradient(180deg, rgba(23,23,23,1) 0%, rgba(0,0,0,1) 100%);
-        border-radius: 1rem;
+        border-radius: 1rem 0 0 1rem;
         
         i{
+            width: 4.5rem;
             color: $white;
         }
 
@@ -118,78 +114,247 @@ main{
 
     background-color: $light-blue;
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("/img/cover.jpg"), center/80%;
-    // background-size: cover;
     
     @media screen and (orientation: landscape) and (max-height: 500px){
         justify-content: flex-start;
     }
 
     .banner-text{
+        height: 25vh;
         width: 100%;
-        // color: $white;
-        color: whitesmoke;
+        background: linear-gradient(295deg, rgba(23,23,23,1) 0%, rgba(0,0,0,1) 100%);
+        box-shadow: 50px 0 50px 0 $black;
 
-        h1{
-            height: 10rem;
-            width: 60%;
-            padding: 1rem;
+        svg{
+            display: block;
 
-            border-top-right-radius: 20px;
-            border-bottom-right-radius: 20px;
+            height: 100%;
+            width: 70%;
+            padding: 2rem;
 
-            font-size: 4rem;
-            font-weight: 600;
-            text-align: right;
-            letter-spacing: 0.2rem;
 
-            background: linear-gradient(295deg, rgba(23,23,23,1) 0%, rgba(0,0,0,1) 100%);
-
-            animation-duration: 5s;
+            animation-duration: 7s;
             animation-name: slidein;
             @keyframes slidein {
                 from{
-                    margin-right: 100%;
-                    width: 150%;
+                    width: 100%;
                 }
                 to{
-                    margin-right: 0;
-                    width: 60%;
-                }
-            }
-        }
-
-        p{
-            position: absolute;
-            left: 30%;
-
-            height: 7rem;
-            width: 70%;
-            padding: 1.4rem;
-
-            border-top-left-radius: 20px;
-            border-bottom-left-radius: 20px;
-
-            background: linear-gradient(129deg, rgba(23,23,23,1) 0%, rgba(0,0,0,1) 100%);
-            font-size: 2rem;
-
-            animation: slide 4s forwards;
-            @keyframes slide {
-                from{
-                    margin-left: 100%;
-                    width: 150%;
-                }
-                to{
-                    margin-left: 0;
                     width: 70%;
                 }
             }
+            
+            g path{
+                stroke-width: 10;
+            }
+            path{
+                stroke-width: 15;
+            }
+            g path:nth-child(2){
+                stroke-dasharray: 1000;
+                stroke-dashoffset: 1000;
+                animation: line-anim 10s ease forwards;
+            }
+            g path:nth-child(3){
+                stroke-dasharray: 654;
+                stroke-dashoffset: 654;
+                animation: line-anim 10s ease forwards 0.3s;
+            }
+            g path:nth-child(4){
+                stroke-dasharray: 2000;
+                stroke-dashoffset: 2000;
+                animation: line-anim 10s ease forwards 0.8s;
+            }
+            g path:nth-child(5){
+                stroke-dasharray: 600;
+                stroke-dashoffset: 600;
+                animation: line-anim 10s ease forwards 0.9s;
+            }
+            g path:nth-child(6){
+                stroke-dasharray: 800;
+                stroke-dashoffset: 800;
+                animation: line-anim 10s ease forwards 1.2s;
+            }
+            g path:nth-child(7){
+                stroke-dasharray: 1000;
+                stroke-dashoffset: 1000;
+                animation: line-anim 10s ease forwards 1.5s;
+            }
+            g path:nth-child(8){
+                stroke-dasharray: 800;
+                stroke-dashoffset: 800;
+                animation: line-anim 10s ease forwards 1.8s;
+            }
+            g path:nth-child(9){
+                stroke-dasharray: 516;
+                stroke-dashoffset: 516;
+                animation: line-anim 10s ease forwards 2.1s;
+            }
+            
+            path:nth-child(3){
+                stroke-dasharray: 700;
+                stroke-dashoffset: 700;
+                animation: line-anim 3s ease forwards 6s;
+                // animation: fill 0.3s ease forwards 13s;            
+            }
+            path:nth-child(4){
+                stroke-dasharray: 500;
+                stroke-dashoffset: 500;
+                // animation: line-anim 10s ease forwards 2s;
+                animation: fill 0.3s ease forwards 7.5s;            
 
-            @media screen and (max-width:400px){
-                height: 8rem;
+            }
+            path:nth-child(5){
+                stroke-width: 15;
+                stroke-dasharray: 345;
+                stroke-dashoffset: 345;
+                // animation: line-anim 10s ease forwards 1.9s;
+                animation: fill 0.3s ease forwards 7.5s;            
+
+            }
+            path:nth-child(6){
+                stroke-dasharray: 365;
+                stroke-dashoffset: 365;
+                animation: line-anim 3s ease forwards 6s;
+                // animation: fill 0.3s ease forwards 7.5s;            
+
+            }
+            path:nth-child(7){
+                stroke-dasharray: 500;
+                stroke-dashoffset: 500;
+                // animation: line-anim 10s ease forwards 1.7.5s;
+                animation: fill 0.3s ease forwards 7.5s;            
+
+            }
+            path:nth-child(8){
+                stroke-dasharray: 300;
+                stroke-dashoffset: 300;
+                // animation: line-anim 10s ease forwards 1.7.5s;
+                animation: fill 0.3s ease forwards 7.5s;            
+
+            }
+            path:nth-child(9){
+                stroke-dasharray: 500;
+                stroke-dashoffset: 500;
+                // animation: line-anim 10s ease forwards 1.5s;
+                animation: fill 0.3s ease forwards 7.5s;            
+
+            }
+            path:nth-child(10){
+                stroke-dasharray: 345;
+                stroke-dashoffset: 345;
+                // animation: line-anim 10s ease forwards 1.4s;
+                animation: fill 0.3s ease forwards 7.5s;            
+
+            }
+            path:nth-child(11){
+                stroke-dasharray: 413;
+                stroke-dashoffset: 413;
+                // animation: line-anim 10s ease forwards 1.3s;
+                animation: fill 0.3s ease forwards 7.5s;            
+
+            }
+            path:nth-child(12){
+                stroke-dasharray: 500;
+                stroke-dashoffset: 500;
+                // animation: line-anim 10s ease forwards 1.2s;
+                animation: fill 0.3s ease forwards 7.5s;            
+
+            }
+            path:nth-child(13){
+                stroke-dasharray: 1000;
+                stroke-dashoffset: 1000;
+                // animation: line-anim 10s ease forwards 1.1s;
+                animation: fill 0.3s ease forwards 7.5s;            
+
+            }
+            path:nth-child(14){
+                stroke-dasharray: 500;
+                stroke-dashoffset: 500;
+                // animation: line-anim 10s ease forwards 1s;
+                animation: fill 0.3s ease forwards 7.5s;            
+
+            }
+            path:nth-child(15){
+                stroke-dasharray: 500;
+                stroke-dashoffset: 500;
+                // animation: line-anim 10s ease forwards 0.9s;
+                animation: fill 0.3s ease forwards 7.5s;            
+
+            }
+            path:nth-child(16){
+                stroke-dasharray: 365;
+                stroke-dashoffset: 365;
+                // animation: line-anim 10s ease forwards 0.7.5s;
+                animation: fill 0.3s ease forwards 7.5s;            
+
+            }
+            path:nth-child(17){
+                stroke-dasharray: 500;
+                stroke-dashoffset: 500;
+                // animation: line-anim 10s ease forwards 0.7.5s;
+                animation: fill 0.3s ease forwards 7.5s;            
+
+            }
+            path:nth-child(18){
+                stroke-dasharray: 500;
+                stroke-dashoffset: 500;
+                animation: line-anim 3s ease forwards 6s;
+                // animation: fill 0.3s ease forwards 7.5s;            
+
+            }
+            path:nth-child(19){
+                stroke-dasharray: 500;
+                stroke-dashoffset: 500;
+                // animation: line-anim 10s ease forwards 0.5s;
+                animation: fill 0.3s ease forwards 7.5s;            
+
+            }
+            path:nth-child(20){
+                stroke-dasharray: 414;
+                stroke-dashoffset: 414;
+                // animation: line-anim 10s ease forwards 0.4s;
+                animation: fill 0.3s ease forwards 7.5s;            
+
+            }
+            path:nth-child(21){
+                stroke-dasharray: 263;
+                stroke-dashoffset: 263;
+                // animation: line-anim 10s ease forwards 0.3s;
+                animation: fill 0.3s ease forwards 7.5s;            
+
+            }
+            path:nth-child(22){
+                stroke-dasharray: 553;
+                stroke-dashoffset: 553;
+                // animation: line-anim 10s ease forwards 0.2s;
+                animation: fill 0.3s ease forwards 7.5s;            
+
+            }
+            path:nth-child(23){
+                stroke-dasharray: 500;
+                stroke-dashoffset: 500;
+                // animation: line-anim 10s ease forwards 0.1s;
+                animation: fill 0.3s ease forwards 7.5s;            
+
+            }
+            @keyframes line-anim{
+                to{
+                    stroke-dashoffset: 0;
+                }
+            }
+            @keyframes fill{
+                from{
+                    fill: transparent;
+                }
+                to{
+                    fill: white;
+                }
             }
         }
     }
 }
+        
 
 .large-screen-display{
     @media screen and (min-width:1250px){
@@ -320,6 +485,7 @@ main{
             @media screen and (min-width: 875px) and (max-height:500px){
                 padding: 0 2rem 1rem 8rem;
             }
+            ///////////////////////////
 
             background-image: url("/img/hole.png");
             background-origin: padding-box;
@@ -346,25 +512,6 @@ main{
                 }
             }
 
-            
-            // @media screen and (min-width:700px) {
-            //     padding: 4rem;
-
-            //     text-align: center;
-            // }
-
-            // @media screen and (min-width:850px) {
-            //     height: 60%;
-            // }
-
-            // @media screen and (min-width:1250px){
-            //     justify-content: center;
-                
-            //     height: 85%;
-            //     padding: 1rem;
-            // }
-
-
             img{
                 padding: 0;
                 margin: 0;
@@ -385,10 +532,6 @@ main{
             }
 
             p{
-                // position: absolute;
-                // left: 25%;
-                // top: 20%;
-
                 width: 100%;
                 margin: 0;
                 padding: 0;
@@ -399,7 +542,6 @@ main{
                 letter-spacing: 0.05rem;
 
                 color: black;
-                
             }
 
         }
@@ -699,9 +841,10 @@ footer{
     background: linear-gradient(180deg, rgba(23,23,23,1) 0%, rgba(0,0,0,1) 100%);
     color: white;
 
-    // @media screen and (min-width:1250px){
-    //     height: 10vh;
-    // }
+    a{  
+        color: inherit;
+        text-decoration: none;
+    }
     
     i{
         padding: 1rem;
@@ -719,7 +862,7 @@ footer{
         color: $light-green;
     }
 
-    .phone:hover{
+    .linked-in:hover{
         background-color: $bright-orange;
         color: $light-blue;
     }
